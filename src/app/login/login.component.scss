@@ -1,0 +1,20 @@
+button{
+    background-color: rgba(31, 117, 236, 1)!important;
+    border-color: rgba(31, 117, 236, 1) !important;
+    border-radius: 1px solid;
+    width:100%;
+    color: #fff !important;
+}
+.eye-icon {
+    position: absolute;
+    bottom: 30%;
+    right: 5%;
+    top: 70%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #8b8b8b;
+    cursor: pointer;
+}
+#password{
+    position: relative !important;
+}

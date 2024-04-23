@@ -1,0 +1,35 @@
+<div class="container" style="background-color: #F9F9F9;">
+    <div class="row mt-3">
+      <div class="col text-start">
+        <h1>Student</h1>
+        <hr style="border: 4px solid #36A2EB; width: 10%; margin-top: 0;">
+        <div class="items">
+            <div class="links d-flex">
+                <h5 style="color:#494949; margin-right: 10px;margin-top: 3px;">Home</h5>
+                <span style="color:#494949; margin-right: 10px; font-size: 19px; font-weight: 500;">&gt;</span>
+                <a routerLink="/students" routerLinkActive="active" style="color:#494949; margin-right: 10px; font-size: 19px; font-weight: 500;">All Student</a>
+                <span style="color:#494949; margin-right: 10px; font-size: 19px; font-weight: 500;">&gt;</span>
+                <a routerLink="/add-student" routerLinkActive="active" class="add-teacher-link" style="color:#494949; margin-right: 10px; font-size: 19px; font-weight: 500;">Add Student</a>
+                <a routerLink="/student-fee" routerLinkActive="active" class="add-teacher-link" style="color:#494949; margin-right: 10px; font-size: 19px; font-weight: 500;">Student Fee</a>
+            </div>
+            </div>
+            <form #signupForm="ngForm" (ngSubmit)="pay()" class="form-inline mt-3" style="background-color: #fff; border-radius: 4px solid #fff;border:4px solid #fff; border-radius: 6px;padding-block: 20px; padding-inline: 30px;">
+                <h3>Add Students</h3>
+                
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form3Example1cg">Studen Email*</label>
+                  
+                    <input type="text" [(ngModel)]="email" name="email" id="form3Example1cg" class="form-control form-control-lg" required/></div>
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form3Example1cg">Amount to pay*</label>
+                      
+                        <input type="number" [(ngModel)]="amount" name="amount" id="form3Example1cg" class="form-control form-control-lg" required/></div>
+                        <div class="d-flex">
+                            <button type="submit"
+                              class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Save</button>
+                              <button type="reset" id="reset"
+                              class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Reset</button>
+                          </div>
+          
+                </form>
+        </div>

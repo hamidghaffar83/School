@@ -1,0 +1,68 @@
+<div class="container" style="background-color: #F9F9F9;">
+    <div class="row mt-3">
+      <div class="col text-start">
+        <h1>Teacher</h1>
+        <hr style="border: 4px solid #36A2EB; width: 10%; margin-top: 0;">
+        <div class="items">
+            <div class="links d-flex">
+                <h5 style="color:#494949; margin-right: 10px;margin-top: 3px;">Home</h5>
+                <a routerLink="/teachers" routerLinkActive="active" style="color:#494949; margin-right: 10px; font-size: 19px; font-weight: 500;">All Teachers</a>
+                <span class="separator" style="color:#494949; margin-right: 10px; font-size: 19px; font-weight: 500; display: none;">&gt;</span>
+                <a routerLink="/add-teacher" routerLinkActive="active" class="add-teacher-link" style="color:#494949; margin-right: 10px; font-size: 19px; font-weight: 500;">Add Teachers</a>
+            </div>
+            <div class="button d-flex mb-3">
+<button routerLink="/add-teacher">Add Teacher</button>
+            </div>
+            </div>
+            
+            
+      </div>
+        <div class="container mt-3" style="background-color: #fff;">
+            <h2 style="margin-block: 10px;">All Teachers Data</h2>
+            <form id="search-form" (ngSubmit)="searchTeachers()">
+              <input type="search" placeholder="Search by name..." [(ngModel)]="searchTerm">
+              <select required [(ngModel)]="selectedClass" placeholder="Select Class...">
+                <option value="" disabled selected hidden>Select Class</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+              </select>
+              <button type="submit">Search</button>
+            </form>
+          
+            <table class="table table-striped mt-3">
+              <thead>
+                <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Gender</th>
+                  <th scope="col">Class</th>
+                  <th scope="col">Subject</th>
+                  <th scope="col">Address</th>
+                  <th scope="col">Date of Birth</th>
+                  <th scope="col">Phone</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let teacher of getPaginatedData(); let i = index">
+                  <td>{{ currentPage * itemsPerPage + i + 1 }}</td>
+                  <td>{{ teacher.firstName + ' ' + teacher.lastName }}</td>
+                  <td>{{ teacher.gender }}</td>
+                  <td>{{ teacher.classes }}</td>
+                  <td>{{ teacher.subject }}</td>
+                  <td>{{ teacher.address }}</td>
+                  <td>{{ teacher.DOB | date:'MM/dd/yyyy' }}</td>
+                  <td>{{ teacher.phoneNumber }}</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="button">
+              <button (click)="onPreviousPage()">Previous</button>
+              <button class="next" (click)="onNextPage()">Next</button>
+            </div>
+          </div>
+          

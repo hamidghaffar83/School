@@ -1,0 +1,72 @@
+a{
+    text-decoration: none;
+}
+.active + .separator {
+color: #379417 !important;
+}
+.active{
+    color: #379417 !important;
+    }
+    .add-teacher-link {
+        display: none;
+    }
+    
+    .active + .separator,
+    .active + .add-teacher-link {
+        display: inline-block;
+    }
+.items{
+    display: flex;
+    justify-content: space-between;
+}
+.active::before {
+    content: '>';
+    color: #379417;
+    margin-right: 10px;
+    font-size: 19px;
+    font-weight: 500;
+}
+button{
+    background-color: #1f75ec;
+    color:#fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding-inline: 12px;
+    padding-block: 6px;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    border-color: #1f75ec;
+
+}
+input, select{
+    width: 35%;
+    background-color: #F9F9F9;
+    border-color: #F9F9F9;
+    margin-right: 30px;
+}
+select{
+    padding-block: 5px;
+}
+form button{
+    width: 15%;
+    background-color: #379417;
+    border-color: #379417;
+    border-radius: 2px solid #379417;
+    color:#fff;
+    padding-block: 6px;
+}
+.button{
+    float: right;
+    margin-block: 20px;
+}
+.button button{
+    margin-inline: 10px;
+}
+.next{
+    background-color: #379417;
+border-color: #379417;
+border-radius: 2px solid #379417;
+}
+table th{
+    color: #1f75ec;
+}

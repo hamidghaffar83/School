@@ -1,0 +1,25 @@
+.card-img-top{
+    margin-inline: 10px;
+    margin-block: 14px 1px;
+    }
+    .card-body{
+        margin-top:-10px;
+        padding-bottom: 1px !important;
+    }
+    .card-number{
+        font-size: 22px;
+        font-weight: bold;
+        color: #252D31;
+    }
+    .date{
+        font-size: 12px;
+        margin-top: -20px !important;
+        padding-bottom: 12px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-inline: 30px;
+        width: 100%;
+    }

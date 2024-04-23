@@ -1,0 +1,41 @@
+<section class="vh-100 bg-image"
+  style="background-image: url('../../assets/bg.png');background-repeat: no-repeat;">
+  
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;margin-top: 30%; margin-bottom: 10%;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Logo Here</h2>
+
+              <form #loginForm="ngForm" (ngSubmit)="submit(loginForm.value)">
+                <h2 class="text-center mb-1 text-primary">Forgot Password?</h2>
+                <p class="text-center mb-5 text-secondary font-weight-bold">Reset password with xyz</p>
+                <div class="container mb-1" style="background-color: #E9F1FD; padding: 10px 5px;">
+                <h6 class="text-center mb-1 text-primary">Enter your email and instruction will be sent to you!</h6></div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="form3Example3cg">Your Email</label>
+                  <div class="input-group">
+                    <span class="input-group-text" style="background-color: transparent;"><img src="../../assets/email.png"></span>
+                  <input type="email" [(ngModel)]="email" name="email" id="form3Example3cg" placeholder="Enter your Email"  required class="form-control form-control-lg" /></div>
+                </div>
+
+                <div class="d-flex">
+                  <button type="submit"
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Send Reset Code</button>
+                </div>
+
+                <p class="text-center text-muted mt-5 mb-0">Wait I remember my password.. <a routerLink="/login"
+                    class="fw-bold text-body" style="text-decoration: none; color: rgba(31, 117, 236, 1)!important">Click Here</a></p>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

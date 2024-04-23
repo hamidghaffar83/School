@@ -1,0 +1,134 @@
+<div class="container" style="background-color: #F9F9F9;">
+    <div class="row mt-3">
+      <div class="col text-start">
+        <h1>Students</h1>
+        <hr style="border: 4px solid #36A2EB; width: 10%; margin-top: 0;">
+        <div class="items">
+            <div class="links d-flex">
+                <h5 style="color:#494949; margin-right: 10px;margin-top: 3px;">Home</h5>
+                <span style="color:#494949; margin-right: 10px; font-size: 19px; font-weight: 500;">&gt;</span>
+                <a routerLink="/students" routerLinkActive="active" style="color:#494949; margin-right: 10px; font-size: 19px; font-weight: 500;">All Students</a>
+                <a routerLink="/add-students" routerLinkActive="active" class="add-student-link" style="color:#494949; margin-right: 10px; font-size: 19px; font-weight: 500;">Add Student</a>
+            </div>
+            </div>
+            
+           </div> 
+      </div>
+    
+      
+    <form #signupForm="ngForm" (ngSubmit)="create()" class="form-inline mt-3" style="background-color: #fff; border-radius: 4px solid #fff;border:4px solid #fff; border-radius: 6px;padding-block: 20px; padding-inline: 30px;">
+        <h3>Add Students</h3>
+        <div class="image">
+          <div class="circle">
+            <img id="uploadedImage" [src]="previewImageUrl" alt="">
+          </div>
+          <div class="upload" style="margin-top: 20px;margin-left: 40px;">
+            <h3>Upload teacher Photo (150px X 150px)</h3>
+            <input type="file" (change)="onFileSelected($event)" accept="image/*" required>
+          </div>
+        </div>
+        
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form3Example1cg">First Name*</label>
+          
+            <input type="text" [(ngModel)]="firstName" name="firstName" id="form3Example1cg" class="form-control form-control-lg" required/></div>
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form3Example1cg">Last Name*</label>
+              
+                <input type="text" [(ngModel)]="lastName" name="lastName" id="form3Example1cg" class="form-control form-control-lg" required/></div>
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="gender">Gender*</label><br>
+                  <select id="gender" [(ngModel)]="gender" name="gender" class="form-control form-control-lg custom-select" required>
+                      <option value="" disabled selected>Please Select Gender</option>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                  </select>
+              </div> 
+              <div class="form-outline mb-4">
+                <label class="form-label" for="dob">Date Of Birth*</label>
+                <input type="date" [(ngModel)]="DOB" name="DOB" id="dob" class="form-control form-control-lg custom-date" required/>
+              </div>
+			  <div class="form-outline mb-4">
+                        <label class="form-label" for="gender">Class*</label><br>
+                        <select id="class" [(ngModel)]="classes" name="classes" class="form-control form-control-lg custom-select" required>
+                            <option value="" disabled selected>Please Select Class</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                          <div class="form-outline mb-4">
+              <label class="form-label" for="form3Example1cg">Blood Group*</label>
+              
+                <input type="text" [(ngModel)]="bloodGroup" name="bloodGroup" id="form3Example1cg" class="form-control form-control-lg"required /></div>         
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="gender">Religion*</label><br>
+                      <select id="religion" [(ngModel)]="religion" name="religion" class="form-control form-control-lg custom-select" required>
+                          <option value="" disabled selected>Please Select Religion</option>
+                          <option value="male">Islam</option>
+                          <option value="female">Hindu</option>
+                      </select>
+                  </div>
+                    
+                        <div class="form-outline mb-4">
+                          <label class="form-label" for="dob">Admission*</label>
+                          <input type="date" [(ngModel)]="admission" name="admission" id="dob" class="form-control form-control-lg custom-date" />
+                          
+                      </div>
+
+					   <h1>Parents</h1>
+        <hr style="border: 4px solid #36A2EB; width: 10%; margin-top: 0;">
+        
+		<div class="form-outline mb-4">
+                        <label class="form-label" for="dob">Father Name*</label>
+                        <input type="text" [(ngModel)]="fatherName" name="fatherName" id="dob" class="form-control form-control-lg custom-date" />
+                        
+                    </div>
+					<div class="form-outline mb-4">
+                        <label class="form-label" for="dob">Mother Name*</label>
+                        <input type="text" [(ngModel)]="motherName" name="motherName" id="dob" class="form-control form-control-lg" />
+                        
+                    </div>
+						<div class="form-outline mb-4">
+                  <label class="form-label" for="form3Example1cg">Email*</label>
+                  
+                    <input type="email" [(ngModel)]="email" name="email" id="form3Example1cg" class="form-control form-control-lg" required /></div>
+					<div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example1cg">Phone*</label>
+                    
+                      <input type="tel" [(ngModel)]="phoneNumber" name="phoneNumber" id="form3Example1cg" class="form-control form-control-lg" required/></div>
+					<div class="form-outline mb-4">
+                      <label class="form-label" for="gender">Religion*</label><br>
+                      <select id="religion" [(ngModel)]="religion" name="religion" class="form-control form-control-lg custom-select" required>
+                          <option value="" disabled selected>Please Select Religion</option>
+                          <option value="male">Islam</option>
+                          <option value="female">Hindu</option>
+                      </select>
+                  </div>
+				  		<div class="form-outline mb-4">
+                        <label class="form-label" for="dob">Father's Occupation*</label>
+                        <input type="text" [(ngModel)]="fatherOccupation" name="fatherOccupation" id="dob" class="form-control form-control-lg" />
+                        
+                    </div>
+					<div class="form-outline mb-4">
+                      <label class="form-label" for="form3Example1cg">Address*</label>
+                      
+                        <input type="text" [(ngModel)]="address" name="address" id="form3Example1cg" class="form-control form-control-lg"required /></div>
+	
+                      
+                      <div class="d-flex">
+                        <button type="submit"
+                          class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Save</button>
+                          <button type="reset" id="reset"
+                          class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Reset</button>
+                      </div>
+      
+            </form>
+    </div>
